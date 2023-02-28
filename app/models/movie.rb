@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
   # before_destroy :check_for_bookmarks
 
   validates :title, uniqueness: true
